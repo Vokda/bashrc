@@ -115,7 +115,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-android_studio="/home/daniel/Programs/android_studio/android-studio/bin/studio.sh"; export android_studio
-LS_COLORS=$LS_COLORS:'di=1;93:' ; export LS_COLORS
-#export TERM=rxvt-unicode
-export PATH=$PATH:~/Programs/:~/Games/:/usr/lib/x86_64-linux-gnu/:/usr/lib/
+#########my stuff########
+alias error_log='sudo tail -f /var/log/apache2/*/error.log /var/log/apache2/error.log'
+alias main='cd /dsk/code/cst/main/'
+alias ca='sh /dsk/code/tst-legacy/chown_axusers';
+
+setterm -blength 0
+
+complete -cf sudo
