@@ -117,9 +117,34 @@ fi
 
 #########my stuff########
 alias error_log='sudo tail -f /var/log/apache2/*/error.log /var/log/apache2/error.log'
-alias main='cd /dsk/code/cst/main/'
-alias ca='sh /dsk/code/tst-legacy/chown_axusers';
+android_studio="/home/daniel/Programs/android_studio/android-studio/bin/studio.sh"; export android_studio
+LS_COLORS=$LS_COLORS:'di=1;93:' ; export LS_COLORS
+#export TERM=rxvt-unicode
+export PATH=$PATH:~/Programs:~/Games:/usr/lib/x86_64-linux-gnu/:/usr/lib/:/lib/i386-linux-gnu/:~/.cargo/bin:/opt/:~/.local/bin:~/Programs/apache-maven-3.8.1/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH=$PATH:~/bin
+export ECLIPSE_HOME=~/Programs/eclipse/java-2022-12/eclipse
+ANSIBLE_NOCOWS=1
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse/extra/usr/lib/x86_64-linux-gnu/
+export PATH=$PATH:$HOME/minio-binaries/
+export VISUAL=vim
+export EDITOR=vim
+export ARTIFACTORY_USER=danieljohansson
+export ARTIFACTORY_PWD=AP5EWnj7sFDewqYbjNP1qCc4mNSTCEyomE9cN8
+export $(dbus-launch)
+export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64/
+export BROWSER=~/Programs/firefox
+#export JAVA_CMD=$JAVA_HOME # fix some day
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GEM_HOME=$HOME/.gem/ruby/3.1.0/
 
-setterm -blength 0
+# wayland stuff
+export MOZ_ENABLE_WAYLAND=1
 
-complete -cf sudo
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
